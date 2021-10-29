@@ -70,7 +70,7 @@ public class WorkDate {
     private void merge() {
         Map<String, WorkDay> dateMap = dateCalDays.stream().collect(Collectors.toMap(WorkDay::getDateStr, Function.identity()));
         DateTime start = DateUtils.parseYear(calStartYearStr);
-        DateTime end = DateUtils.parseYear(calEndYearStr);
+        DateTime end = DateUtils.endOfYear(calEndYearStr);
         java.util.Calendar startCalendar = start.toCalendar();
         List<WorkDay> all = new ArrayList<>();
         WorkDay first = null;

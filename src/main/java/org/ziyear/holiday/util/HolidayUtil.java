@@ -57,4 +57,8 @@ public class HolidayUtil {
             throw new WorkDateException("日期校验失败！", e);
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println(isHoliday("20220102"));
+    }
 }

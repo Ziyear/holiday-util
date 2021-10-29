@@ -14,4 +14,9 @@ public class DateUtils extends DateUtil {
     public static DateTime parseYear(String yearStr) {
         return parse(yearStr, YEAR_FORMAT);
     }
+
+    public static DateTime endOfYear(String yearsStr) {
+        DateTime dateTime = parseYear(yearsStr);
+        return endOfYear(dateTime);
+    }
 }
